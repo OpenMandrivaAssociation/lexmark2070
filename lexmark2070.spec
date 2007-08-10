@@ -1,7 +1,7 @@
 Summary:	Lexmark 2070 Printer B/W driver
 Name:		lexmark2070
 Version:	0.6
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL
 Group:		File tools
 URL:		http://www.kornblum.i-p.com/2070/Lexmark2070.old.html
