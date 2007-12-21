@@ -10,6 +10,7 @@ Requires:	c2070
 BuildRequires:	netpbm-devel
 Conflicts:	printer-utils = 2007
 Conflicts:	printer-filters = 2007
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This filter allows to print in B/W a Lexmark 2070 (windows GDI) printer.
