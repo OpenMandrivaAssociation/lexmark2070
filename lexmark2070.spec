@@ -1,11 +1,12 @@
 Summary:	Lexmark 2070 Printer B/W driver
 Name:		lexmark2070
 Version:	0.6
-Release:	%mkrel 7
+Release:	%mkrel 8
 License:	GPL
 Group:		System/Printing
 URL:		http://www.kornblum.i-p.com/2070/Lexmark2070.old.html
 Source0:	http://www.kornblum.i-p.com/2070/Lexmark2070.latest.tar.bz2
+Patch0:		Lexmark2070-LDFLAGS.diff
 Requires:	c2070
 BuildRequires:	netpbm-devel
 Conflicts:	printer-utils = 2007
@@ -18,11 +19,10 @@ This filter allows to print in B/W a Lexmark 2070 (windows GDI) printer.
 %prep
 
 %setup -q -c
+%patch0 -p0
 
 %build
-# make it use cflags
-perl -pi -e "s|gcc|gcc \\$\(CFLAGS\)|g" makefile
-make -f makefile CFLAGS="%{optflags}"
+make -f makefile CFLAGS="%{optflags}" LDFLAGS="%{ldflags}"
 
 %install
 rm -rf %{buildroot}
