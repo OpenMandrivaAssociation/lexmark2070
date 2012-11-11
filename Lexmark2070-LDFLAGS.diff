@@ -1,0 +1,26 @@
+--- makefile	1999-06-29 17:47:08.000000000 +0200
++++ makefile.oden	2008-12-25 00:55:56.000000000 +0100
+@@ -1,18 +1,20 @@
+ #
+ # makefile for the lexmark 2070 printer driver
+ #
++CFLAGS = -Wall
++CDFLAGS = 
+ 
+ # the main target: Lexmark2070 binary
+ Lexmark2070: Lexmark2070.o pbm.o
+-	gcc -o Lexmark2070 Lexmark2070.o pbm.o -O
++	gcc $(CFLAGS) $(LDFLAGS) -o Lexmark2070 Lexmark2070.o pbm.o -O
+ 
+ # the pbm module
+ pbm.o: pbm.h pbm.c
+-	gcc -c pbm.c
++	gcc $(CFLAGS) -c pbm.c
+ 
+ # the main module
+ Lexmark2070.o: pbm.h Lexmark2070.c
+-	gcc -c Lexmark2070.c
++	gcc $(CFLAGS) -c Lexmark2070.c
+ 
+ # use this to test your printing configuration
+ test:
