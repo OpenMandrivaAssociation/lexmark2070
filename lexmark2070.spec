@@ -4,7 +4,7 @@ Version:	0.6
 Release:	26
 License:	GPLv2
 Group:		System/Printing
-Url:		http://www.kornblum.i-p.com/2070/Lexmark2070.old.html
+Url:		https://www.kornblum.i-p.com/2070/Lexmark2070.old.html
 Source0:	http://www.kornblum.i-p.com/2070/Lexmark2070.latest.tar.bz2
 Patch0:	Lexmark2070-LDFLAGS.diff
 BuildRequires:	netpbm-devel
