@@ -7,6 +7,7 @@ Group:		System/Printing
 Url:		https://www.kornblum.i-p.com/2070/Lexmark2070.old.html
 Source0:	http://www.kornblum.i-p.com/2070/Lexmark2070.latest.tar.bz2
 Patch0:	Lexmark2070-LDFLAGS.diff
+BuildRequires:	make
 BuildRequires:	netpbm-devel
 Requires:	c2070
 
